@@ -1,6 +1,14 @@
 // Centralized content + data for the RankForge marketing site.
 // Icons are referenced by lucide-react name and resolved in components.
 
+/** Prefix a static-asset path with the deploy basePath (for GitHub Pages).
+ *  next/link auto-applies basePath to route hrefs, but plain <a> tags and
+ *  raw asset URLs do not — use this for those. */
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+export function withBase(path: string): string {
+  return `${BASE_PATH}${path}`
+}
+
 export type IconName = string
 
 export interface Feature {

@@ -15,7 +15,7 @@ import { AmbientBackground } from "@/components/Backgrounds"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { Reveal } from "@/components/primitives"
-import { DOWNLOAD } from "@/lib/content"
+import { DOWNLOAD, withBase } from "@/lib/content"
 
 export const metadata: Metadata = {
   title: "Download for Windows",
@@ -90,7 +90,7 @@ export default function DownloadPage() {
               <Reveal delay={0.15}>
                 <div className="mt-9">
                   <a
-                    href={DOWNLOAD.file}
+                    href={withBase(DOWNLOAD.file)}
                     download={DOWNLOAD.fileName}
                     className="btn-primary !px-7 !py-4 !text-base"
                   >

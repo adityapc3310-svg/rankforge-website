@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Logo } from "./Navbar"
 
 const GROUPS = [
@@ -57,12 +58,21 @@ export function Footer() {
               <ul className="mt-4 space-y-2.5">
                 {g.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-text-muted transition-colors hover:text-text"
-                    >
-                      {l.label}
-                    </a>
+                    {l.href.startsWith("/") ? (
+                      <Link
+                        href={l.href}
+                        className="text-sm text-text-muted transition-colors hover:text-text"
+                      >
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={l.href}
+                        className="text-sm text-text-muted transition-colors hover:text-text"
+                      >
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

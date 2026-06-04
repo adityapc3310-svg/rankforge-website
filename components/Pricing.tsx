@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Check, ArrowRight } from "lucide-react"
 import { SectionHeading, Reveal } from "./primitives"
@@ -72,12 +73,15 @@ export function Pricing() {
                   ))}
                 </ul>
 
-                <a
-                  href={plan.featured ? "/download" : "#join"}
-                  className={`mt-7 ${plan.featured ? "btn-primary" : "btn-ghost"}`}
-                >
-                  {plan.cta} <ArrowRight className="h-4 w-4" />
-                </a>
+                {plan.featured ? (
+                  <Link href="/download" className="btn-primary mt-7">
+                    {plan.cta} <ArrowRight className="h-4 w-4" />
+                  </Link>
+                ) : (
+                  <a href="#join" className="btn-ghost mt-7">
+                    {plan.cta} <ArrowRight className="h-4 w-4" />
+                  </a>
+                )}
               </motion.div>
             </Reveal>
           ))}

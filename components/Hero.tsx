@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, ShieldCheck, Sparkles, Star } from "lucide-react"
 import { DashboardMockup } from "./DashboardMockup"
@@ -60,10 +61,10 @@ export function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.32 }}
             className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
-            <a href="/download" className="btn-primary w-full sm:w-auto">
+            <Link href="/download" className="btn-primary w-full sm:w-auto">
               Download for Windows
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
             <a href="#dashboard" className="btn-ghost w-full sm:w-auto">
               See it in action
             </a>

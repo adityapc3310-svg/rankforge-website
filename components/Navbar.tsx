@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Flame } from "lucide-react"
 import { NAV_LINKS } from "@/lib/content"
@@ -49,9 +50,9 @@ export function Navbar() {
           <a href="#pricing" className="px-3.5 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text">
             Pricing
           </a>
-          <a href="/download" className="btn-primary !px-5 !py-2.5">
+          <Link href="/download" className="btn-primary !px-5 !py-2.5">
             Download
-          </a>
+          </Link>
         </div>
 
         <button
@@ -81,9 +82,9 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="/download" onClick={() => setOpen(false)} className="btn-primary mt-2 w-full">
+            <Link href="/download" onClick={() => setOpen(false)} className="btn-primary mt-2 w-full">
               Download
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
