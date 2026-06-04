@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-display: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * {
+    border-color: theme("colors.line");
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #050507;
+    color: theme("colors.text.DEFAULT");
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(139, 92, 246, 0.35);
+    color: #fff;
+  }
+
+  /* Sleek custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08080c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262635;
+    border-radius: 9999px;
+    border: 2px solid #08080c;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a4d;
+  }
+}
+
+@layer components {
+  .container-rf {
+    @apply mx-auto w-full max-w-container px-6 md:px-8;
+  }
+
+  /* Gradient text — the signature brand treatment */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      120deg,
+      #fff 0%,
+      #c4b5fd 45%,
+      #a78bfa 70%,
+      #7dd3fc 100%
+    );
+  }
+
+  .text-gradient-iris {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #c4b5fd, #8b5cf6 60%, #7c3aed);
+  }
+
+  /* Glass surface system */
+  .glass {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.025) 100%
+    );
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Animated border-gradient card frame */
+  .card-frame {
+    position: relative;
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, #0e0e16 0%, #0a0a10 100%);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .card-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      130deg,
+      rgba(139, 92, 246, 0.5),
+      rgba(255, 255, 255, 0.04) 35%,
+      rgba(255, 255, 255, 0.04) 65%,
+      rgba(56, 189, 248, 0.35)
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  .card-frame:hover::before {
+    opacity: 1;
+  }
+
+  /* Eyebrow / section kicker pill */
+  .kicker {
+    @apply inline-flex items-center gap-2 rounded-full border border-line-strong bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium tracking-wide text-text-muted;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-all duration-300;
+    background: linear-gradient(180deg, #8b5cf6, #6d28d9);
+    box-shadow: 0 8px 30px -8px rgba(124, 58, 237, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 12px 40px -8px rgba(124, 58, 237, 0.9),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line-strong bg-white/[0.02] px-6 py-3 text-sm font-semibold text-text transition-all duration-300 hover:border-iris-500/50 hover:bg-white/[0.05];
+  }
+
+  /* Faint dotted/grid backdrop helper */
+  .bg-dots {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.07) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+}
+
+@layer utilities {
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent);
+  }
+  .mask-fade-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .perspective {
+    perspective: 2000px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
