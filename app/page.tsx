@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
 import { StatsBar } from "@/components/StatsBar"
 import { Features } from "@/components/Features"
+import { TwoModes } from "@/components/TwoModes"
 import { DashboardShowcase } from "@/components/DashboardShowcase"
 import { AISection } from "@/components/AISection"
 import { Comparison } from "@/components/Comparison"
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <Features />
+        <TwoModes />
         <DashboardShowcase />
         <AISection />
         <Comparison />

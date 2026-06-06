@@ -19,13 +19,13 @@ export function Hero() {
           className="flex justify-center"
         >
           <a
-            href="#ai"
+            href="#modes"
             className="group inline-flex items-center gap-2 rounded-full border border-line-strong bg-white/[0.03] py-1.5 pl-1.5 pr-4 text-sm text-text-muted transition-colors hover:border-iris-500/40"
           >
             <span className="inline-flex items-center gap-1 rounded-full bg-iris-500/15 px-2.5 py-1 text-xs font-semibold text-iris-300">
               <Sparkles className="h-3 w-3" /> New
             </span>
-            WhatsApp AI Agent is here
+            Now with Productivity OS mode
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
           </a>
         </motion.div>
