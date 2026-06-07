@@ -6,6 +6,11 @@
 *.log
 *.tsbuildinfo
 next-env.d.ts
-.env*.local
+
+# Environment — never commit real secrets. Only .env.example is tracked.
+.env
+.env.*
+!.env.example
+
 .DS_Store
 npm-debug.log*
