@@ -302,9 +302,9 @@ export const PRICING: PricingPlan[] = [
 export const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "Modes", href: "#modes" },
-  { label: "Dashboard", href: "#dashboard" },
-  { label: "AI", href: "#ai" },
+  { label: "How it works", href: "#how" },
   { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
 ]
 
 export interface Stat {

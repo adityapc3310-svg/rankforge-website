@@ -47,8 +47,13 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
-          <a href="#pricing" className="px-3.5 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text">
-            Pricing
+          <a
+            href="https://github.com/adityapc3310-svg/rankforge-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3.5 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
+          >
+            GitHub
           </a>
           <Link href="/download" className="btn-primary !px-5 !py-2.5">
             Download

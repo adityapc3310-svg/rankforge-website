@@ -4,12 +4,14 @@ import { Hero } from "@/components/Hero"
 import { StatsBar } from "@/components/StatsBar"
 import { Features } from "@/components/Features"
 import { TwoModes } from "@/components/TwoModes"
+import { HowItWorks } from "@/components/HowItWorks"
 import { DashboardShowcase } from "@/components/DashboardShowcase"
 import { AISection } from "@/components/AISection"
 import { Comparison } from "@/components/Comparison"
 import { Testimonials } from "@/components/Testimonials"
 import { Roadmap } from "@/components/Roadmap"
 import { Pricing } from "@/components/Pricing"
+import { FAQ } from "@/components/FAQ"
 import { FinalCTA } from "@/components/FinalCTA"
 import { Footer } from "@/components/Footer"
 
@@ -23,12 +25,14 @@ export default function Home() {
         <StatsBar />
         <Features />
         <TwoModes />
+        <HowItWorks />
         <DashboardShowcase />
         <AISection />
         <Comparison />
         <Testimonials />
         <Roadmap />
         <Pricing />
+        <FAQ />
         <FinalCTA />
       </main>
       <Footer />
