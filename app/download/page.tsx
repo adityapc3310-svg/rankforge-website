@@ -12,8 +12,8 @@ import {
   Sparkles,
 } from "lucide-react"
 import { AmbientBackground } from "@/components/Backgrounds"
-import { Navbar } from "@/components/Navbar"
-import { Footer } from "@/components/Footer"
+import { NavV3 } from "@/components/v3/NavV3"
+import { FooterV3 } from "@/components/v3/FooterV3"
 import { Reveal } from "@/components/primitives"
 import { DOWNLOAD, withBase } from "@/lib/content"
 
@@ -52,7 +52,7 @@ export default function DownloadPage() {
   return (
     <>
       <AmbientBackground />
-      <Navbar />
+      <NavV3 />
       <main className="relative">
         <section className="container-rf pb-16 pt-36 sm:pt-44">
           <Reveal>
@@ -184,7 +184,7 @@ export default function DownloadPage() {
           </Reveal>
         </section>
       </main>
-      <Footer />
+      <FooterV3 />
     </>
   )
 }

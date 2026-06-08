@@ -1,41 +1,37 @@
 import { AmbientBackground } from "@/components/Backgrounds"
-import { Navbar } from "@/components/Navbar"
-import { Hero } from "@/components/Hero"
-import { StatsBar } from "@/components/StatsBar"
-import { Features } from "@/components/Features"
-import { TwoModes } from "@/components/TwoModes"
-import { HowItWorks } from "@/components/HowItWorks"
-import { DashboardShowcase } from "@/components/DashboardShowcase"
-import { AISection } from "@/components/AISection"
-import { Comparison } from "@/components/Comparison"
-import { Testimonials } from "@/components/Testimonials"
-import { Roadmap } from "@/components/Roadmap"
-import { Pricing } from "@/components/Pricing"
-import { FAQ } from "@/components/FAQ"
-import { FinalCTA } from "@/components/FinalCTA"
-import { Footer } from "@/components/Footer"
+import { NavV3 } from "@/components/v3/NavV3"
+import { HeroV3 } from "@/components/v3/HeroV3"
+import { ProblemV3 } from "@/components/v3/ProblemV3"
+import { SystemV3 } from "@/components/v3/SystemV3"
+import { TwoModesV3 } from "@/components/v3/TwoModesV3"
+import { AIActsV3 } from "@/components/v3/AIActsV3"
+import { ConsistencyV3 } from "@/components/v3/ConsistencyV3"
+import { IntelligenceV3 } from "@/components/v3/IntelligenceV3"
+import { OfflineV3 } from "@/components/v3/OfflineV3"
+import { ShowcaseV3 } from "@/components/v3/ShowcaseV3"
+import { WhyV3 } from "@/components/v3/WhyV3"
+import { FinalCTAV3 } from "@/components/v3/FinalCTAV3"
+import { FooterV3 } from "@/components/v3/FooterV3"
 
 export default function Home() {
   return (
     <>
       <AmbientBackground />
-      <Navbar />
+      <NavV3 />
       <main className="relative">
-        <Hero />
-        <StatsBar />
-        <Features />
-        <TwoModes />
-        <HowItWorks />
-        <DashboardShowcase />
-        <AISection />
-        <Comparison />
-        <Testimonials />
-        <Roadmap />
-        <Pricing />
-        <FAQ />
-        <FinalCTA />
+        <HeroV3 />
+        <ProblemV3 />
+        <SystemV3 />
+        <TwoModesV3 />
+        <AIActsV3 />
+        <ConsistencyV3 />
+        <IntelligenceV3 />
+        <OfflineV3 />
+        <ShowcaseV3 />
+        <WhyV3 />
+        <FinalCTAV3 />
       </main>
-      <Footer />
+      <FooterV3 />
     </>
   )
 }

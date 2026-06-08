@@ -19,34 +19,35 @@ const SITE = "https://rankforge.app"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "RankForge — The Operating System for High Achievers",
+    default: "RankForge — The Operating System for Ambitious People",
     template: "%s · RankForge",
   },
   description:
-    "RankForge is an AI-powered personal growth and productivity operating system. Plan, focus, and forge the future version of yourself — every goal and habit in one system.",
+    "RankForge is an AI-powered, offline-first execution operating system. Planning, focus, habits, analytics, and coaching in one desktop app that helps you execute consistently — for board/JEE/NEET exams or any ambitious goal.",
   keywords: [
-    "AI productivity",
-    "study planner",
-    "habit tracker",
+    "execution operating system",
+    "AI planner",
     "focus app",
+    "habit system",
     "exam preparation",
-    "personal operating system",
+    "JEE NEET CBSE",
+    "offline productivity",
     "RankForge",
   ],
   authors: [{ name: "RankForge" }],
   openGraph: {
     type: "website",
     url: SITE,
-    title: "RankForge — The Operating System for High Achievers",
+    title: "RankForge — The Operating System for Ambitious People",
     description:
-      "Stop managing tasks. Start building your future. AI planning, focus, habits, and analytics in one premium system.",
+      "Stop managing tools. Start building yourself. Planning, focus, habits, analytics & AI in one offline-first system. One system, every goal.",
     siteName: "RankForge",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RankForge — The Operating System for High Achievers",
+    title: "RankForge — The Operating System for Ambitious People",
     description:
-      "AI planning, focus, habits, and analytics in one premium system. Forge the future version of yourself.",
+      "Stop managing tools. Start building yourself. One offline-first system for every goal.",
   },
   robots: { index: true, follow: true },
 }
