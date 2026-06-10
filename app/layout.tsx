@@ -46,7 +46,10 @@ export const metadata: Metadata = {
   },
   category: "productivity",
   verification: {
-    google: "8TcjJlcViSwA4DdxGTqK8OylUvzugbA_9drtfFKQ674",
+    google: [
+      "8TcjJlcViSwA4DdxGTqK8OylUvzugbA_9drtfFKQ674", // github.io property
+      "2LzP6ZH3E0L-WHgiS7PtDtPgtKlhTOvzSeGgPUK4R7U", // rank-rankforge.vercel.app property
+    ],
   },
   openGraph: {
     type: "website",
