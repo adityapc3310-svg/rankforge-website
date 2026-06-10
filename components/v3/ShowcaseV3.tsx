@@ -25,6 +25,7 @@ import {
   type LucideIcon,
 } from "lucide-react"
 import { SectionHeading, Reveal } from "../primitives"
+import { Tilt3D } from "../v4/Tilt3D"
 
 /* ------------------------------------------------------------------ *
  * Tab config
@@ -1001,6 +1002,7 @@ export function ShowcaseV3() {
         {/* App window */}
         <Reveal delay={0.15}>
           <div className="perspective mt-8">
+            <Tilt3D max={4}>
             <div className="relative overflow-hidden rounded-2xl border border-line-strong bg-ink-900/80 shadow-card backdrop-blur-xl md:rounded-[20px]">
               {/* Title bar */}
               <div className="flex items-center gap-3 border-b border-line bg-ink-850/80 px-4 py-3">
@@ -1038,6 +1040,7 @@ export function ShowcaseV3() {
                 </AnimatePresence>
               </div>
             </div>
+            </Tilt3D>
           </div>
         </Reveal>
 

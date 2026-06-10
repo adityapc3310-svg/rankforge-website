@@ -1,8 +1,8 @@
-import { AmbientBackground } from "@/components/Backgrounds"
+import { Ambient3D } from "@/components/three/Ambient3D"
 import { NavV3 } from "@/components/v3/NavV3"
-import { HeroV3 } from "@/components/v3/HeroV3"
+import { Hero3D } from "@/components/v4/Hero3D"
 import { ProblemV3 } from "@/components/v3/ProblemV3"
-import { SystemV3 } from "@/components/v3/SystemV3"
+import { SystemOrbit3D } from "@/components/v4/SystemOrbit3D"
 import { TwoModesV3 } from "@/components/v3/TwoModesV3"
 import { AIActsV3 } from "@/components/v3/AIActsV3"
 import { ConsistencyV3 } from "@/components/v3/ConsistencyV3"
@@ -34,12 +34,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }}
       />
-      <AmbientBackground />
+      <Ambient3D />
       <NavV3 />
       <main className="relative">
-        <HeroV3 />
+        <Hero3D />
         <ProblemV3 />
-        <SystemV3 />
+        <SystemOrbit3D />
         <TwoModesV3 />
         <AIActsV3 />
         <ConsistencyV3 />

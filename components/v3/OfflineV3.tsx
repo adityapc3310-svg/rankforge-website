@@ -13,6 +13,7 @@ import {
   ShieldCheck,
 } from "lucide-react"
 import { Reveal, SectionHeading, SpotlightCard } from "../primitives"
+import { FloatingShape } from "../three/FloatingShape"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -285,6 +286,12 @@ export function OfflineV3() {
     <section id="offline" className="relative scroll-mt-24 py-24 md:py-32">
       {/* ambient depth */}
       <div className="pointer-events-none absolute left-1/2 top-28 -z-10 h-72 w-[46rem] max-w-full -translate-x-1/2 rounded-full bg-iris-600/10 blur-[150px]" />
+
+      {/* floating 3D accent */}
+      <FloatingShape
+        variant="octa"
+        className="pointer-events-none absolute right-[3%] top-12 -z-10 hidden h-[300px] w-[300px] lg:block"
+      />
 
       <div className="container-rf">
         <SectionHeading

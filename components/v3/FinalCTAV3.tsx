@@ -4,6 +4,7 @@ import Link from "next/link"
 import { motion, useReducedMotion } from "framer-motion"
 import { Download, ShieldCheck, MonitorCheck, WifiOff } from "lucide-react"
 import { Reveal } from "../primitives"
+import { FloatingShape } from "../three/FloatingShape"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -97,6 +98,12 @@ export function FinalCTAV3() {
                 ))}
               </div>
             )}
+
+            {/* nested 3D rings accent — behind content, clipped by the panel edge */}
+            <FloatingShape
+              variant="rings"
+              className="pointer-events-none absolute -right-16 top-1/2 -z-10 hidden h-[360px] w-[360px] -translate-y-1/2 opacity-80 lg:block"
+            />
 
             {/* content */}
             <div className="relative px-6 py-20 text-center sm:px-10 md:py-28 lg:px-16">
