@@ -338,3 +338,42 @@ export const DOWNLOAD = {
   platform: "Windows 10 / 11 · 64-bit",
   sizeLabel: "~83 MB",
 }
+
+export interface Faq {
+  q: string
+  a: string
+}
+
+// FAQ — doubles as visible content and FAQPage structured data. Answers are
+// written to reinforce the brand entity ("RankForge is …") and to target the
+// long-tail brand queries that are realistically winnable. Keep answers honest.
+export const FAQS: Faq[] = [
+  {
+    q: "What is RankForge?",
+    a: "RankForge is an offline-first AI productivity and study operating system for Windows. It unifies daily planning, deep-focus sessions, habit tracking, analytics, accountability, and an AI coach into a single desktop app, so you can plan and execute your goals from one place instead of juggling separate tools.",
+  },
+  {
+    q: "What platforms does RankForge support?",
+    a: "RankForge is a native desktop app for Windows 10 and Windows 11 (64-bit). It installs with a standard Windows wizard and runs locally on your machine.",
+  },
+  {
+    q: "Does RankForge work offline?",
+    a: "Yes. RankForge is offline-first and stores all of your data in a private local database on your own computer. Core features — planner, focus mode, habits, and analytics — work with no internet connection and no cloud account.",
+  },
+  {
+    q: "Do I need an account to use RankForge?",
+    a: "No. RankForge does not require you to create an account or sign in. You download the app, install it, and start using it immediately — your data stays on your device.",
+  },
+  {
+    q: "Is RankForge free?",
+    a: "RankForge offers a free version you can download and use on Windows today. Optional AI-powered features can use your own API key or a paid plan, but the core planning, focus, habit, and analytics tools are free.",
+  },
+  {
+    q: "How is RankForge different from Notion, Todoist, or a calendar app?",
+    a: "Those tools each solve one slice of the problem — notes, tasks, or time. RankForge is a single system: an adaptive AI planner builds your day, a full-screen focus mode protects it, habits and streaks keep you consistent, and analytics show your real progress. It also replans automatically when life drifts, and it runs fully offline and private.",
+  },
+  {
+    q: "What is the Adaptive Accountability Lockdown?",
+    a: "It is an optional feature that notices when you have fallen behind on your commitments, asks what happened, and — if needed — guides you through an evidence-based recovery plan before unlocking distractions again. It is always escapable with your own override PIN, and it is off by default until you turn it on.",
+  },
+]
