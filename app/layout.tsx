@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   category: "productivity",
+  verification: {
+    google: "8TcjJlcViSwA4DdxGTqK8OylUvzugbA_9drtfFKQ674",
+  },
   openGraph: {
     type: "website",
     url: SITE,
