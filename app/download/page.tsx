@@ -20,6 +20,16 @@ import { DOWNLOAD, withBase } from "@/lib/content"
 export const metadata: Metadata = {
   title: "Download for Windows",
   description: `Download RankForge ${DOWNLOAD.version} for Windows — the offline-first operating system for high achievers. ${DOWNLOAD.sizeLabel}.`,
+  alternates: {
+    canonical: "/download/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/download/",
+    title: "Download RankForge for Windows",
+    description: `Download RankForge ${DOWNLOAD.version} for Windows — the offline-first operating system for high achievers.`,
+    siteName: "RankForge",
+  },
 }
 
 const STEPS = [
