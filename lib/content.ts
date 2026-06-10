@@ -10,14 +10,13 @@ export function withBase(path: string): string {
 }
 
 /** Absolute, canonical origin of the live site — used for metadata, canonical
- *  tags, sitemap.xml, robots.txt and structured data. On the GitHub Pages
- *  deploy this includes the repo basePath; override with NEXT_PUBLIC_SITE_URL
- *  (e.g. a custom domain or the Vercel URL) when deploying elsewhere. */
+ *  tags, sitemap.xml, robots.txt and structured data.
+ *  We've consolidated on the Vercel URL as the single public home: every deploy
+ *  (Vercel + the GitHub Pages mirror) declares its canonical here, so search
+ *  engines merge all ranking signals onto one URL instead of splitting them.
+ *  Override with NEXT_PUBLIC_SITE_URL if you later add a custom domain. */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.GITHUB_PAGES === "true"
-    ? "https://adityapc3310-svg.github.io/rankforge-website"
-    : "https://rankforge.app")
+  process.env.NEXT_PUBLIC_SITE_URL || "https://rank-rankforge.vercel.app"
 ).replace(/\/$/, "")
 
 export type IconName = string
