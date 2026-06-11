@@ -331,11 +331,11 @@ export const STATS: Stat[] = [
 ]
 
 export const DOWNLOAD = {
-  version: "0.7.6",
-  fileName: "RankForge-Setup-0.7.6.exe",
-  file: "/downloads/RankForge-Setup-0.7.6.exe",
+  version: "0.7.7",
+  fileName: "RankForge-Setup-0.7.7.exe",
+  file: "/downloads/RankForge-Setup-0.7.7.exe",
   platform: "Windows 10 / 11 · 64-bit",
-  sizeLabel: "~83 MB",
+  sizeLabel: "~84 MB",
 }
 
 export interface Faq {
