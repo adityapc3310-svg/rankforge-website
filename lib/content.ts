@@ -6,6 +6,8 @@
  *  raw asset URLs do not — use this for those. */
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 export function withBase(path: string): string {
+  // Absolute URLs (e.g. the GitHub Release download) pass through untouched.
+  if (/^https?:\/\//.test(path)) return path
   return `${BASE_PATH}${path}`
 }
 
@@ -330,12 +332,15 @@ export const STATS: Stat[] = [
   { value: 9, suffix: "", label: "Exam tracks supported" },
 ]
 
+// The installer is served from the GitHub Release (host-independent, and the
+// binary is too large to commit into the repo). `withBase()` passes absolute
+// URLs through untouched, so this works on both Vercel and the Pages mirror.
 export const DOWNLOAD = {
-  version: "0.7.10",
-  fileName: "RankForge-Setup-0.7.10.exe",
-  file: "/downloads/RankForge-Setup-0.7.10.exe",
+  version: "0.7.12",
+  fileName: "RankForge-Setup-0.7.12.exe",
+  file: "https://github.com/adityapc3310-svg/rankforge-website/releases/download/v0.7.12/RankForge-Setup-0.7.12.exe",
   platform: "Windows 10 / 11 · 64-bit",
-  sizeLabel: "~84 MB",
+  sizeLabel: "~102 MB",
 }
 
 export interface Faq {
