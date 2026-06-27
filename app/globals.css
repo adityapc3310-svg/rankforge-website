@@ -192,3 +192,30 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Stitch design primitives (RankForge landing) ─────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  border-color: #cabeff;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
+}
+.forge-gradient {
+  background: linear-gradient(135deg, #cabeff 0%, #0566d9 100%);
+}
+.ambient-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(202, 190, 255, 0.08) 0%, rgba(5, 102, 217, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+.forge-btn-glow {
+  box-shadow: 0px 0px 15px rgba(202, 190, 255, 0.3);
+}

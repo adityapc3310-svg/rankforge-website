@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { SITE_URL } from "@/lib/content"
 
+// Inter powers both body and display type for the Stitch landing
+// (--font-sans + --font-display, the latter set in globals.css).
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -93,7 +95,7 @@ const JSON_LD = {
         "An AI-powered, offline-first execution operating system: planning, focus, habits, analytics, accountability and coaching in one desktop app.",
       url: SITE,
       downloadUrl: `${SITE}/download/`,
-      softwareVersion: "0.7.12",
+      softwareVersion: "0.7.13",
       offers: {
         "@type": "Offer",
         price: "0",
@@ -135,6 +137,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
       <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
