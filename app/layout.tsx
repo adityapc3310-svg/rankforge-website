@@ -95,7 +95,7 @@ const JSON_LD = {
         "An AI-powered, offline-first execution operating system: planning, focus, habits, analytics, accountability and coaching in one desktop app.",
       url: SITE,
       downloadUrl: `${SITE}/download/`,
-      softwareVersion: "0.7.14",
+      softwareVersion: "0.7.15",
       offers: {
         "@type": "Offer",
         price: "0",
