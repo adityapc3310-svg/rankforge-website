@@ -336,9 +336,9 @@ export const STATS: Stat[] = [
 // binary is too large to commit into the repo). `withBase()` passes absolute
 // URLs through untouched, so this works on both Vercel and the Pages mirror.
 export const DOWNLOAD = {
-  version: "0.7.15",
-  fileName: "RankForge-Setup-0.7.15.exe",
-  file: "https://github.com/adityapc3310-svg/rankforge-website/releases/download/v0.7.15/RankForge-Setup-0.7.15.exe",
+  version: "0.7.16",
+  fileName: "RankForge-Setup-0.7.16.exe",
+  file: "https://github.com/adityapc3310-svg/rankforge-website/releases/download/v0.7.16/RankForge-Setup-0.7.16.exe",
   platform: "Windows 10 / 11 · 64-bit",
   sizeLabel: "~102 MB",
 }
